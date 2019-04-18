@@ -136,3 +136,7 @@ $(window).scroll(function() {
 $('#toTop').click(function() {
 	$('html, body').animate({ scrollTop: 0 }, 1000);
 });
+  $(document).ready(function(){
+    $('.tooltipped').tooltip();
+  });
+        
