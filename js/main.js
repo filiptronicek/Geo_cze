@@ -53,6 +53,23 @@ addLatLong(50.23204, 12.87099, 'markb', 'Já');
 addLatLong(48.973911, 14.47502, 'markb', 'Já');
 addLatLong(49.56517, 13.882542, 'markb', 'Já');
 addLatLong(49.56517, 13.882542, 'markb', 'Já');
+addLatLong(50.410751, 14.902810, 'markb', 'Já');
+addLatLong(50.228210, 14.883570, 'markb', 'Já');
+addLatLong(48.639328, 14.229320, 'markb', 'Já');
+addLatLong(48.657278, 14.369968, 'markb', 'Já');
+addLatLong(50.362979, 12.929926, 'markb', 'Já');
+addLatLong(50.409734, 12.924454, 'markb', 'Já');
+addLatLong(49.471874, 14.761347, 'markb', 'Já');
+addLatLong(50.416538, 16.163151, 'markb', 'Já');
+addLatLong(49.755959, 16.469460, 'markb', 'Já');
+addLatLong(48.810719, 14.315020, 'markb', 'Já');
+/*
+addLatLong(, 'markb', 'Já');
+addLatLong(, 'markb', 'Já');
+addLatLong(, 'markb', 'Já');
+addLatLong(, 'markb', 'Já');
+addLatLong(, 'markb', 'Já');
+*/
 
 //Rodiče
 addLatLong(50.075539, 14.4378, 'markr', 'Rodiče');
