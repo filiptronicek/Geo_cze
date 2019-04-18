@@ -99,7 +99,7 @@ function gMapsLink(item, index) {
 		encodeURIComponent(item) +
 		'&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
 	var link =
-		" <li><a id='location' onClick='openMap(\"" +
+		" <li><a class='tooltipped' data-position='left' data-tooltip='Lool' id='location' onClick='openMap(\"" +
 		item +
 		"\")' hrfef='http://maps.google.com/maps?q=" +
 		encodeURIComponent(item) +
