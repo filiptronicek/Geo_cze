@@ -26,6 +26,7 @@ function addLatLong(lat, long, img, desc) {
 	);
 	vectorLayer.addFeatures(feature);
 }
+
 // Já
 // addLatLong(, 'markb', 'Já');
 
