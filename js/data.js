@@ -194,3 +194,6 @@ $('#toTop').click(function() {
 var gmap = document.getElementById('ales').children[0];
 gmap.innerHTML +=
 	' <div class="tooltip"><i class="material-icons">info</i> <span class="tooltiptext">Klikněte pro zobrazení na mapě</span> </div> ';
+$(document).ready(function() {
+	$('menu').load('menu.html');
+});
