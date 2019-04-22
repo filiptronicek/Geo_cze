@@ -29,7 +29,7 @@ function addLatLong(lat, long, img, desc) {
 
 // Já
 // addLatLong(, 'markb', 'Já');
-
+/*
 addLatLong(50.124372, 14.484508, 'markb', 'Já');
 addLatLong(50.075539, 14.4378, 'markb', 'Já');
 addLatLong(50.209431, 15.83263, 'markb', 'Já');
@@ -72,7 +72,7 @@ addLatLong(, 'markb', 'Já');
 */
 
 //Rodiče
-addLatLong(50.075539, 14.4378, 'markr', 'Rodiče');
+//addLatLong(50.075539, 14.4378, 'markr', 'Rodiče');
 
 //Ostatní
 addLatLong(50.209431, 15.83263, 'markg', 'Ostatní');
