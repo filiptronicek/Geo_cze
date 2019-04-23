@@ -120,7 +120,19 @@ Filip = [
 	'Ratibořice',
 	'Náchod',
 	'Svitavy',
-	'Český Krumlov'
+	'Český Krumlov',
+	'Samšina',
+	'Pec pod Sněžkou',
+	'Bezdružice',
+	'Vševily',
+	'Příbram',
+	'Dvůr Králové nad Labem',
+	'Karlštejn',
+	'Roudnice nad Labem',
+	'Říčany',
+	'Bedřichov',
+	'Slapy',
+	'Kuks'
 ];
 var Martina = [
 	'Lysá Hora',
@@ -416,21 +428,32 @@ var Rodice = [
 	'Náchod',
 	'Nové Město nad Metují'
 ];
+
+//myarr.indexOf('turtles') > -1; //420 day m8s
 Ales.forEach(AlesFunc);
 Filip.forEach(FilipFunc);
 Martina.forEach(MartinaFunc);
-Rodice.forEach(RodiceFunc)
+Rodice.forEach(RodiceFunc);
 
 function AlesFunc(item, index) {
 	var realIndex = index + 1;
+
+	var randomElem = Math.floor(Math.random() * 1000000000);
+	var randomElemEl = '#' + randomElem;
 	console.log('Renderování <li> elementu pro ' + item + ', které je v seznamu ' + realIndex + '. (Aleš list)');
 	var map =
 		'<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
 		encodeURIComponent(item) +
 		'&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
-	var link = " <li><a id='location' onClick='openMap(\"" + item + '")\'>' + item + '</a></li>';
+	var link =
+		" <li><a id='location' class='" + randomElem + "'onClick='openMap(\"" + item + '")\'>' + item + '</a></li>';
 
 	document.getElementById('ales').innerHTML += link + '<br />';
+	var back = [ '#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#f1c40f', '#e67e22', '#e67e22' ];
+	var rand = back[Math.floor(Math.random() * back.length)];
+	console.log(rand);
+	console.log(randomElemEl);
+	$(randomElemEl).css('background', rand);
 }
 function FilipFunc(item, index) {
 	var realIndex = index + 1;
@@ -480,7 +503,7 @@ $.get(
 */
 function openMap(e) {
 	$('#map').html(
-		'<iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
+		'<iframe width="100%" height="800" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
 			encodeURIComponent(e) +
 			'&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>'
 	);
