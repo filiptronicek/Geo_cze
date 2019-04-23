@@ -1,3 +1,23 @@
+var colors = [
+	'deep-orange',
+	'brown',
+	'yellow',
+	'amber',
+	'orange',
+	'green',
+	'light-green',
+	'lime',
+	'light-blue',
+	'cyan',
+	'teal',
+	'deep-purple',
+	'indigo',
+	'blue',
+	'red',
+	'pink',
+	'purple',
+	'blue-grey'
+];
 var Ales = [
 	'Hradec Králové',
 	'Jaroměř',
@@ -515,7 +535,6 @@ function openMap(e) {
 		1500
 	);
 }
-$('a').click(function() {});
 $(window).scroll(function() {
 	if ($(this).scrollTop()) {
 		$('#toTop').fadeIn();
@@ -536,5 +555,10 @@ var gmap = document.getElementById('ales').children[0];
 gmap.innerHTML +=
 	' <div class="tooltip"><i class="material-icons">info</i> <span class="tooltiptext">Klikněte pro zobrazení na mapě</span> </div> ';
 $(document).ready(function() {
-	$('menu').load('menu.html');
+	var randomColor = colors[Math.floor(Math.random() * colors.length)];
+	//var randomShoot = '#' + ((Math.random() * 0xffffff) << 0).toString(16);
+	$('#toTop').removeClass('red');
+	$('#toTop').addClass(randomColor);
+	//$('#toTop').css('background', '#' + ((Math.random() * 0xffffff) << 0).toString(16));
+	//$('flag1').attr('fill', randomShoot);
 });

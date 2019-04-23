@@ -57,3 +57,9 @@ ul li a {
 .tooltip:hover .tooltiptext {
 	opacity: 1;
 }
+.subheader {
+	font-size: 2.5vh;
+}
+.notesul {
+	list-style-type: circle !important;
+}
