@@ -152,7 +152,15 @@ Filip = [
 	'Říčany',
 	'Bedřichov',
 	'Slapy',
-	'Kuks'
+	'Kuks',
+	'Peklo',
+	'Jilemnice',
+	'Neratovice',
+	'Český Dub',
+	'Mělník',
+	'Lázně Libverda',
+	'Nová Paka',
+	'Jablonec nad Nisou'
 ];
 var Martina = [
 	'Lysá Hora',
