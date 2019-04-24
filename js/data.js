@@ -441,7 +441,7 @@ var Rodice = [
 	'Orlík',
 	'Příbram',
 	'Kladno',
-	'Beron',
+	'Beroun',
 	'Mělník',
 	'Rokytnice nad Jizerou',
 	'Studenec',
