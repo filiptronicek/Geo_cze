@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+	box-sizing: border-box;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#timeline-section {
+	background-color: #474e5d;
+	font-family: Helvetica, sans-serif;
+	width: 100%;
+	font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background-color: white;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+	padding: 10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: -17px;
+	background-color: white;
+	border: 4px solid #ff9f55;
+	top: 15px;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+	left: 0;
+}
+
+/* Place the container to the right */
+.right {
+	left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	right: 30px;
+	border: medium solid white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	left: 30px;
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+	left: -16px;
+}
+
+/* The actual content */
+.content {
+	padding: 20px 30px;
+	background-color: white;
+	position: relative;
+	border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+	/* Place the timelime to the left */
+	.timeline::after {
+		left: 31px;
+	}
+
+	/* Full-width containers */
+	.container {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	}
+
+	/* Make sure that all arrows are pointing leftwards */
+	.container::before {
+		left: 60px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	}
+
+	/* Make sure all circles are at the same spot */
+	.left::after,
+	.right::after {
+		left: 15px;
+	}
+
+	/* Make all right containers behave like the left ones */
+	.right {
+		left: 0%;
+	}
+}
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 4.2rem;
+}
+#info {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.6;
+	font-size: 1.6rem;
+	text-align: center;
+}
+#info p {
+	font-size: 18px;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+body {
+	height: 7000px;
+	background: linear-gradient(141deg, #ffffff 0%, #d8d8d8 30%, #474e5d 50%);
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+}
+
+.title {
+	color: grey;
+	font-size: 18px;
+}
+
+button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+	font-size: 22px;
+	color: black;
+}
+
+button:hover,
+a:hover {
+	opacity: 0.7;
+}
+.card {
+	float: right;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 5%;
+	right: 5%;
+	background: #fff;
+}
+#github {
+	height: 20%;
+	width: 45%;
+}
+#menu{
+	font-size: 4vw;
+	
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  .card {
+	  display: none;
+  }
+  #menu{
+	font-size: 15vw;
+	
+}
+#github {
+	width: 100%;
+}
+}
