@@ -191,7 +191,7 @@ var Martina = [
 	'Janské Lázně',
 	'Jiřetín pod Jedlovou',
 	'Kytlice',
-	'Zaltman',
+	'Žaltman',
 	'Nový Bor',
 	'Mělník',
 	'Uterý',
