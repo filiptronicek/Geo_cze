@@ -1,43 +1,51 @@
 <html>
-  <head><title>Zeměpis -- projekt</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="apple-touch-icon" href="img/flag.png" />
-    <link rel="shortcut icon" href="img/flag.png" />
-  </head>
-  <body>
-    
-      <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">Projekt na ČR
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="45" height="30">
-                <rect width="45" height="30" fill="#d7141a"/>
-                <rect width="45" height="15" fill="#fff"/>
-                <path d="M 22.5,15 0,0 V 30 z" fill="#11457e"/>
-              </svg></a>
+    <head>
+        <title>Zeměpis -- projekt</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="img/flag.png" rel="apple-touch-icon"/>
+        <link href="img/flag.png" rel="shortcut icon"/>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Projekt na ČR
+                        <svg height="30" version="1.0" width="45" xmlns="http://www.w3.org/2000/svg">
+                            <rect fill="#d7141a" height="30" width="45"/>
+                            <rect fill="#fff" height="15" width="45"/>
+                            <path d="M 22.5,15 0,0 V 30 z" fill="#11457e"/>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="">Interaktivní mapa</a>
+                    </li>
+                    <li class="">
+                        <a href="datasets.html">Data</a>
+                    </li>
+                    <li class="">
+                        <a href="o-projektu.html">O projektu</a>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="http://filiptronicek.github.io">©Filip Troníček</a>
+                    </li>
+
+                </ul>
             </div>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="">Interaktivní mapa</a></li>
-              <li class=""><a href="datasets.html">Data</a></li>
-              <li class=""><a href="o-projektu.html">O projektu</a></li>
-
-    
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://filiptronicek.4fan.cz">©Filip Troníček</a></li>
-    
-              </ul>
-          </div>
         </nav>
-      
+
         <div id="container">
-  <div id="mapdiv"></div>
-</div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.11/lib/OpenLayers.js"></script> 
-  <script src="js/main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <div id="mapdiv"></div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.11/lib/OpenLayers.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-</body></html>
-
-	
+    </body>
+</html>
