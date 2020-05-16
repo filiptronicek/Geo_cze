@@ -477,8 +477,6 @@ function AlesFunc(item, index) {
 	document.getElementById('ales').innerHTML += link + '<br />';
 	var back = [ '#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#f1c40f', '#e67e22', '#e67e22' ];
 	var rand = back[Math.floor(Math.random() * back.length)];
-	console.log(rand);
-	console.log(randomElemEl);
 	$(randomElemEl).css('background', rand);
 }
 function FilipFunc(item, index) {
@@ -518,7 +516,6 @@ function openMap(e) {
 			encodeURIComponent(e) +
 			'&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>'
 	);
-	console.log('Vyzobrazování místa ' + e);
 	$([ document.documentElement, document.body ]).animate(
 		{
 			scrollTop: $('#map').offset().top
