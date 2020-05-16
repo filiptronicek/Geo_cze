@@ -463,49 +463,45 @@ Martina.forEach(MartinaFunc);
 Rodice.forEach(RodiceFunc);
 
 function AlesFunc(item, index) {
-	var realIndex = index + 1;
 
-	var randomElem = Math.floor(Math.random() * 1000000000);
-	var randomElemEl = '#' + randomElem;
-	var map =
+	const randomElem = Math.floor(Math.random() * 1000000000);
+	const randomElemEl = '#' + randomElem;
+	const map =
 		'<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
 		encodeURIComponent(item) +
 		'&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
-	var link =
+	const link =
 		" <li><a id='location' class='" + randomElem + "'onClick='openMap(\"" + item + '")\'>' + item + '</a></li>';
 
 	document.getElementById('ales').innerHTML += link + '<br />';
-	var back = [ '#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#f1c40f', '#e67e22', '#e67e22' ];
-	var rand = back[Math.floor(Math.random() * back.length)];
+	const back = [ '#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#f1c40f', '#e67e22', '#e67e22' ];
+	const rand = back[Math.floor(Math.random() * back.length)];
 	$(randomElemEl).css('background', rand);
 }
 function FilipFunc(item, index) {
-	var realIndex = index + 1;
-	var map =
+	const map =
 		'<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
 		encodeURIComponent(item) +
 		'&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
-	var link = " <li><a id='location' onClick='openMap(\"" + item + '")\'>' + item + '</a></li>';
+	const link = " <li><a id='location' onClick='openMap(\"" + item + '")\'>' + item + '</a></li>';
 
 	document.getElementById('filip').innerHTML += link + '<br />';
 }
 function MartinaFunc(item, index) {
-	var realIndex = index + 1;
-	var map =
+	const map =
 		'<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
 		encodeURIComponent(item) +
 		'&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
-	var link = " <li><a id='location' onClick='openMap(\"" + item + '")\'>' + item + '</a></li>';
+	const link = " <li><a id='location' onClick='openMap(\"" + item + '")\'>' + item + '</a></li>';
 
 	document.getElementById('martina').innerHTML += link + '<br />';
 }
 function RodiceFunc(item, index) {
-	var realIndex = index + 1;
-	var map =
+	const map =
 		'<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
 		encodeURIComponent(item) +
 		'&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
-	var link = " <li><a id='location' onClick='openMap(\"" + item + '")\'>' + item + '</a></li>';
+	const link = " <li><a id='location' onClick='openMap(\"" + item + '")\'>' + item + '</a></li>';
 
 	document.getElementById('rodice').innerHTML += link + '<br />';
 }
