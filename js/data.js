@@ -1,4 +1,4 @@
-var colors = [
+const colors = [
 	'deep-orange',
 	'brown',
 	'yellow',
@@ -18,7 +18,7 @@ var colors = [
 	'purple',
 	'blue-grey'
 ];
-var Ales = [
+const Ales = [
 	'Hradec Králové',
 	'Jaroměř',
 	'Dvůr Králové nad Labem',
@@ -110,7 +110,7 @@ var Ales = [
 	'Radvánovice',
 	'Častolovice'
 ];
-Filip = [
+const Filip = [
 	'Česká Lípa',
 	'Nový Bydžov',
 	'Brno',
@@ -162,7 +162,7 @@ Filip = [
 	'Nová Paka',
 	'Jablonec nad Nisou'
 ];
-var Martina = [
+const Martina = [
 	'Lysá Hora',
 	'Frenstat pod Radhoštěm',
 	'Rožnov pod Radhoštěm',
@@ -365,7 +365,7 @@ var Martina = [
 	'Jáchymov',
 	'Heroltice'
 ];
-var Rodice = [
+const Rodice = [
 	'Aš',
 	'Cheb',
 	'Mariánské lázně',
@@ -457,7 +457,6 @@ var Rodice = [
 	'Nové Město nad Metují'
 ];
 
-//myarr.indexOf('turtles') > -1; //420 day m8s
 Ales.forEach(AlesFunc);
 Filip.forEach(FilipFunc);
 Martina.forEach(MartinaFunc);
@@ -468,7 +467,6 @@ function AlesFunc(item, index) {
 
 	var randomElem = Math.floor(Math.random() * 1000000000);
 	var randomElemEl = '#' + randomElem;
-	console.log('Renderování <li> elementu pro ' + item + ', které je v seznamu ' + realIndex + '. (Aleš list)');
 	var map =
 		'<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
 		encodeURIComponent(item) +
@@ -485,7 +483,6 @@ function AlesFunc(item, index) {
 }
 function FilipFunc(item, index) {
 	var realIndex = index + 1;
-	console.log('Renderování <li> elementu pro ' + item + ', které je v seznamu ' + realIndex + '. (Filip list)');
 	var map =
 		'<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
 		encodeURIComponent(item) +
@@ -496,7 +493,6 @@ function FilipFunc(item, index) {
 }
 function MartinaFunc(item, index) {
 	var realIndex = index + 1;
-	console.log('Renderování <li> elementu pro ' + item + ', které je v seznamu ' + realIndex + '. (Filip list)');
 	var map =
 		'<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
 		encodeURIComponent(item) +
@@ -507,7 +503,6 @@ function MartinaFunc(item, index) {
 }
 function RodiceFunc(item, index) {
 	var realIndex = index + 1;
-	console.log('Renderování <li> elementu pro ' + item + ', které je v seznamu ' + realIndex + '. (Filip list)');
 	var map =
 		'<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
 		encodeURIComponent(item) +
@@ -516,19 +511,7 @@ function RodiceFunc(item, index) {
 
 	document.getElementById('rodice').innerHTML += link + '<br />';
 }
-/*
-$.get(
-	'http://www.mapquestapi.com/geocoding/v1/address?',
-	{
-		location: 'Hradec Králové',
-		key: 'n9zxGG50g7dR18Q5o0aC8cJXjdr8a4Lp'
-	},
-	function(data) {
-		console.log(data['results'][0]['locations'][0]['latLng']);
 
-	}
-);
-*/
 function openMap(e) {
 	$('#map').html(
 		'<iframe width="100%" height="800" id="gmap_canvas" src="https://maps.google.com/maps?q=' +
@@ -554,19 +537,12 @@ $(window).scroll(function() {
 $('#toTop').click(function() {
 	$('html, body').animate({ scrollTop: 0 }, 1000);
 });
-/*
-<div class="tooltip">Hover over me
-  <span class="tooltiptext">Tooltip text</span>
-</div> 
-*/
-var gmap = document.getElementById('ales').children[0];
+
+const gmap = document.getElementById('ales').children[0];
 gmap.innerHTML +=
 	' <div class="tooltip"><i class="material-icons">info</i> <span class="tooltiptext">Klikněte pro zobrazení na mapě</span> </div> ';
 $(document).ready(function() {
 	var randomColor = colors[Math.floor(Math.random() * colors.length)];
-	//var randomShoot = '#' + ((Math.random() * 0xffffff) << 0).toString(16);
 	$('#toTop').removeClass('red');
 	$('#toTop').addClass(randomColor);
-	//$('#toTop').css('background', '#' + ((Math.random() * 0xffffff) << 0).toString(16));
-	//$('flag1').attr('fill', randomShoot);
 });
