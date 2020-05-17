@@ -153,6 +153,9 @@ h1 {
 a {
 	color: black;
 	text-decoration: none;
+	text-decoration: none;
+	font-size: 22px;
+	color: black;
 }
 a:hover {
 	text-decoration: underline;
@@ -193,13 +196,6 @@ button {
 	width: 100%;
 	font-size: 18px;
 }
-
-a {
-	text-decoration: none;
-	font-size: 22px;
-	color: black;
-}
-
 button:hover,
 a:hover {
 	opacity: 0.7;
