@@ -19,6 +19,8 @@
   top: 0;
 }
 .leaflet-container {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
   background: #ddd;
   outline: 0;
   overflow: hidden;
@@ -100,6 +102,8 @@
   position: relative;
   z-index: 7;
   pointer-events: auto;
+  float: left;
+  clear: both;
 }
 .leaflet-top,
 .leaflet-bottom {
@@ -119,11 +123,8 @@
 .leaflet-left {
   left: 0;
 }
-.leaflet-control {
-  float: left;
-  clear: both;
-}
 .leaflet-right .leaflet-control {
+  margin-right: 10px;
   float: right;
 }
 .leaflet-top .leaflet-control {
@@ -135,10 +136,6 @@
 .leaflet-left .leaflet-control {
   margin-left: 10px;
 }
-.leaflet-right .leaflet-control {
-  margin-right: 10px;
-}
-
 /* zoom and fade animations */
 
 .leaflet-fade-anim .leaflet-tile,
@@ -177,10 +174,6 @@
 
 .leaflet-clickable {
   cursor: pointer;
-}
-.leaflet-container {
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
 }
 .leaflet-popup-pane,
 .leaflet-control {
